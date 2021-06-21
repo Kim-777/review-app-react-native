@@ -1,18 +1,19 @@
-import * as React from "react";
+import React from "react";
 import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/Home";
 import ReviewDetails from "../screens/ReviewDetails";
+import Header from '../shared/Header';
 
 const Stack = createStackNavigator();
 
-function homeStack() {
+function homeStack({ navigation }) {
     return (
         <Stack.Navigator
             screenOptions={{
                 headerStyle: {
-                    backgroundColor: "tomato",
+                    backgroundColor: "rgb(250, 124, 112)",
                     height: 60,
                 },
                 headerTintColor: "white",
@@ -21,12 +22,12 @@ function homeStack() {
             <Stack.Screen
                 name="Home"
                 component={Home}
-                options={{ title: "영화 리뷰" }}
+                options={{ headerTitle: () => <Header navigation={navigation} /> }}
             />
             <Stack.Screen
                 name="ReviewDetails"
                 component={ReviewDetails}
-                options={{ title: "영화 디테일 테이지" }}
+                options={{ title: "영화 디테일 페이지" }}
             />
         </Stack.Navigator>
     );

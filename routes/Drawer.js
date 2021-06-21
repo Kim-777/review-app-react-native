@@ -1,8 +1,8 @@
 import * as React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
-import Home from "../screens/Home";
-import About from "../screens/About";
+// import Home from "../screens/Home";
+// import About from "../screens/About";
 import HomeStack from "./HomeStack";
 import AboutStack from "./AboutStack";
 
