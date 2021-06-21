@@ -12,8 +12,8 @@ function AboutStack({ navigation }) {
         <Stack.Navigator
             screenOptions={{
                 headerStyle: {
-                    backgroundColor: "rgb(250, 124, 112)",
-                    height: 60,
+                    backgroundColor: "rgb(194, 250, 255)",
+                    height: 80,
                 },
                 headerTintColor: "white",
             }}
@@ -21,7 +21,7 @@ function AboutStack({ navigation }) {
             <Stack.Screen
                 name="About"
                 component={About}
-                options={{ headerTitle: () => <Header navigation={navigation} /> }}
+                options={{ headerTitle: () => <Header navigation={navigation} title="어바웃 페이지" /> }}
             />
         </Stack.Navigator>
     );

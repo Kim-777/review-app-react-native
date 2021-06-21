@@ -1,10 +1,15 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
-import { globalStyles } from '../styles/global';
+import { View, Text, StyleSheet, Image } from 'react-native';
+import { globalStyles, images } from '../styles/global';
+import Card from '../shared/Card';
+
+
 
 const ReviewDetails = ({ navigation, route }) => {
 
     const { title, body, rating } = route.params;
+
+    console.log('rating', rating);
 
     const pressHandler = () => {
         navigation.goBack();
@@ -12,18 +17,29 @@ const ReviewDetails = ({ navigation, route }) => {
 
     return (
         <View style={globalStyles.container}>
-            <Text>{ title }</Text>
-            <Text>{ rating }</Text>
-            <Text>{ body }</Text>
+            <Card>
+                <Text>{ title }</Text>
+                <Text>{ body }</Text>
+                <View style={styles.rating}>
+                    <Text>내 마음대로 영화 평점 : </Text>
+                    <Image source={images.ratings[rating]} />
+                </View>
+            </Card>
         </View>
     )
 }
 
 
-// const styles = StyleSheet.create({
-//     container: {
-//         padding: 24
-//     }
-// })
+const styles = StyleSheet.create({
+    rating: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        paddingTop: 16,
+        marginTop: 16,
+        borderTopWidth: 1,
+        borderTopColor: '#eee',
+    },
+
+})
 
 export default ReviewDetails;

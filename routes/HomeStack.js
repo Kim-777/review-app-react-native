@@ -13,8 +13,8 @@ function homeStack({ navigation }) {
         <Stack.Navigator
             screenOptions={{
                 headerStyle: {
-                    backgroundColor: "rgb(250, 124, 112)",
-                    height: 60,
+                    backgroundColor: "rgb(194, 250, 255)",
+                    height: 80,
                 },
                 headerTintColor: "white",
             }}
@@ -22,7 +22,7 @@ function homeStack({ navigation }) {
             <Stack.Screen
                 name="Home"
                 component={Home}
-                options={{ headerTitle: () => <Header navigation={navigation} /> }}
+                options={{ headerTitle: () => <Header navigation={navigation} title="영화 기록앱"/> }}
             />
             <Stack.Screen
                 name="ReviewDetails"
