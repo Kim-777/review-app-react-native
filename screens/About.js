@@ -6,7 +6,7 @@ import { globalStyles } from '../styles/global';
 const About = () => {
     return (
         <View style={globalStyles.container}>
-            <Text>어바웃 스크린</Text>
+            <Text>안녕하세요! 이건 제가 처음 만들어 보는 리액트 네이티브 앱입니다😋</Text>
         </View>
     )
 }
